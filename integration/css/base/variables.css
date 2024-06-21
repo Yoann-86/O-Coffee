@@ -1,0 +1,17 @@
+:root {
+  /* backgrounds  */
+  --bg-principal-color: #f7eddb;
+  --bg-light-contrast-color: #c4a682;
+  --bg-contrast-color: #c4a682;
+  --bg-high-contrast: #613c2f;
+
+  /* text */
+  --text-principal-color: #000;
+  --text-light-contrast-color: #c4a682;
+  --text-contrast-color: #613c2f;
+
+  /* components */
+  --component-color: #c4a682;
+  --component-opacity-color: rgb(196, 166, 130, 0.5);
+  --component-contrast-color: #613c2f;
+}

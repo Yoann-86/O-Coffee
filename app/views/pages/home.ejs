@@ -1,0 +1,47 @@
+<%- include('../partials/head') %>
+<main class="app__main">
+  <section class="main-section main-section__about">
+    <article class="main-section__about--article">
+      <h2 class="h2--about">Qui sommes-nous ?</h2>
+      <p>
+        Jean et Jacques Pepper, deux frères passionnés par le café, sont les
+        fondateurs de notre boutique. <br />
+        <br />
+        Avec une expertise approfondie et un amour profond pour cette délicieuse
+        boisson, ils ont créé un espace où le café est célébré comme une
+        expérience raffinée et inspirante.
+      </p>
+      <a class="button" href="/catalog"> Voir le catalogue </a>
+    </article>
+    <figure class="main-section__about--figure">
+      <img
+        src="/images/about.webp"
+        alt="Une table avec plusieurs cafés préparés"
+      />
+    </figure>
+  </section>
+  <section class="main-section main-section__novelties">
+    <h2 class="h2--novelties">Nouveautées</h2>
+    <div class="grid-section">
+      <% newCoffees.forEach(coffee => { %>
+
+      <article class="card">
+        <header>
+          <h3 class="card__title"><%= coffee.name %></h3>
+        </header>
+        <figure class="card__img">
+          <img
+            src="/images/coffees/<%= coffee.reference %>.webp"
+            alt="<%= coffee.alt_txt %>"
+          />
+        </figure>
+        <a class="button btn-secondary" href="/product/<%= coffee.id %>"
+          >Découvrir</a
+        >
+      </article>
+
+      <% }) %>
+    </div>
+  </section>
+</main>
+<%- include('../partials/foot') %>

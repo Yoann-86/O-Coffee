@@ -1,0 +1,46 @@
+<%- include('../partials/head') %>
+<main class="app__main">
+  <header>
+    <div class="title">
+      <h2>Notre catalogue</h2>
+    </div>
+  </header>
+  <section class="main-section main-section__products">
+    <form
+      class="form-filter"
+      action="/catalog"
+      method="get"
+      aria-labelledby="coffee-category"
+    >
+      <select name="category" id="coffee-category" class="form-filter__input">
+        <option value="">-- Toutes les catégories --</option>
+        <% characteristics.forEach(charac => { %>
+        <option value="<%= charac.characteristic %>">
+          <%= charac.characteristic %>
+        </option>
+        <% }) %>
+      </select>
+      <input type="submit" value="Valider" class="form--btn button" />
+    </form>
+    <div class="grid-section">
+      <% coffees.forEach(coffee => { %>
+
+      <article class="card">
+        <header>
+          <h3 class="card__title"><%= coffee.name %></h3>
+        </header>
+        <figure class="card__img">
+          <img
+            src="/images/coffees/<%= coffee.reference %>.webp"
+            alt="<%= coffee.alt_txt %>"
+          />
+        </figure>
+        <a class="button btn-secondary" href="/product/<%= coffee.id %>"
+          >Découvrir</a
+        >
+      </article>
+      <% }) %>
+    </div>
+  </section>
+</main>
+<%- include('../partials/foot') %>

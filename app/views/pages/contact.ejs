@@ -1,0 +1,59 @@
+<%- include('../partials/head') %>
+<main class="app__main">
+  <h2>Contactez-nous</h2>
+  <form action="" method="post" class="contact--form">
+    <div class="contact--form__div" aria-labelledby="firstname">
+      <label for="firstname">Prenom<em class="required--em">*</em></label>
+      <input
+        type="text"
+        name="firstname"
+        id="firstname"
+        placeholder="Votre prenom"
+        required
+      />
+    </div>
+    <div class="contact--form__div" aria-labelledby="lastname">
+      <label for="lastname">Nom<em class="required--em">*</em></label>
+      <input
+        type="text"
+        name="lastname"
+        id="lastname"
+        placeholder="Votre nom"
+        required
+      />
+    </div>
+    <div class="contact--form__div" aria-labelledby="email">
+      <label for="email">Email<em class="required--em">*</em></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="example@mail.com"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required
+      />
+    </div>
+    <div class="contact--form__div" aria-labelledby="subject">
+      <label for="subject">Objet</label>
+      <input
+        type="text"
+        name="subject"
+        id="subject"
+        placeholder="Sujet de votre message"
+      />
+    </div>
+    <div class="contact--form__div" aria-labelledby="message">
+      <label for="message">Message<em class="required--em">*</em></label>
+      <textarea
+        name="message"
+        id="message"
+        required
+        minlength="30"
+        placeholder="Votre message"
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="button">Envoyer</button>
+  </form>
+</main>
+<%- include('../partials/foot') %>

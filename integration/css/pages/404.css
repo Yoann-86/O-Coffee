@@ -1,0 +1,29 @@
+body {
+  min-height: 100vh;
+}
+
+.error--img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+}
+h2 {
+  margin-block-start: 30px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-contrast-color);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .error--img {
+    position: static;
+  }
+}

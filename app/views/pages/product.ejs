@@ -1,0 +1,38 @@
+<%- include('../partials/head') %>
+<main class="app__main">
+  <section class="main-section">
+    <div class="drawing">
+      <figure class="drawing--figure">
+        <img
+          src="/images/coffees/<%= coffee.reference %>.png"
+          alt="<%= coffee.alt_txt %>"
+        />
+      </figure>
+    </div>
+  </section>
+  <section class="main-section">
+    <article class="product--card">
+      <h2 class="h2--product"><%= coffee.name %></h2>
+      <div class="product__description">
+        <p>
+          <em>Déscription :</em><br />
+          <br />
+          <%= coffee.description %><br />
+          <br />
+        </p>
+        <p>
+          <em>Origine :</em> <%= coffee.origin %><br />
+          <br />
+          <em>Caractéristique principale :</em> <%= coffee.characteristic %><br />
+          <br />
+          <em>Référence :</em> <%= coffee.reference %><br />
+          <br />
+          <em>Prix au kilo :</em> <%= coffee.price %>€<br />
+        </p>
+      </div>
+
+      <a class="button btn-product" href="/catalog">Catalogue</a>
+    </article>
+  </section>
+</main>
+<%- include('../partials/foot') %>

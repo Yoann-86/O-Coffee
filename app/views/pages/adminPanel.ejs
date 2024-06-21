@@ -1,0 +1,107 @@
+<%- include('../partials/head') %>
+<main class="app__main">
+  <h2>Espace administrateur</h2>
+  <section class="add-product--section">
+    <h3>Ajouter un produit</h3>
+
+    <form action="" method="POST" class="add-product--form">
+      <div class="contact--form__div" aria-labelledby="name">
+        <label for="name">Nom</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Nom du café"
+          required
+        />
+      </div>
+
+      <div class="contact--form__div" aria-labelledby="description">
+        <label for="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          placeholder="Description du café"
+          minlength="30"
+          maxlength="250"
+          required
+        ></textarea>
+      </div>
+
+      <div class="contact--form__div" aria-labelledby="origin">
+        <label for="origin">Origine</label>
+        <input
+          type="text"
+          name="origin"
+          id="origin"
+          placeholder="Example : Colombie"
+          maxlength="30"
+          required
+        />
+      </div>
+
+      <div class="contact--form__div" aria-labelledby="characteristic">
+        <label for="characteristic">Catégorie</label>
+        <input
+          type="text"
+          name="characteristic"
+          id="characteristic"
+          placeholder="Example : épicé"
+          maxlength="20"
+          required
+        />
+      </div>
+
+      <div class="contact--form__div checkbox" aria-labelledby="availability">
+        <label for="availability">Disponibilité</label>
+        <input
+          type="checkbox"
+          name="availability"
+          id="availability"
+          value="true"
+          checked
+        />
+      </div>
+
+      <div class="contact--form__div" aria-labelledby="price">
+        <label for="price">Prix au kilo</label>
+        <input
+          type="number"
+          name="price"
+          id="price"
+          placeholder="Example : 29.90"
+          required
+        />
+      </div>
+
+      <div class="contact--form__div" aria-labelledby="reference">
+        <label for="reference">Référence</label>
+        <input
+          type="number"
+          name="reference"
+          id="reference"
+          placeholder="Example : 1234567890"
+          maxlength="15"
+          required
+        />
+      </div>
+
+      <div class="contact--form__div" aria-labelledby="alt_txt">
+        <label for="alt_txt">Description de l'image</label>
+        <textarea
+          name="alt_txt"
+          id="alt_txt"
+          placeholder="Brève description de l'image"
+          maxlength="140"
+        ></textarea>
+      </div>
+
+      <input
+        type="submit"
+        value="Ajouter le produit"
+        class="button add-product--form__button"
+      />
+    </form>
+  </section>
+</main>
+<%- include('../partials/foot') %>

@@ -1,0 +1,46 @@
+.app__main {
+  margin-inline: 5vw;
+  padding-block-start: 12vh;
+}
+
+.shop--article {
+  width: 60vw;
+  margin-inline: auto;
+  margin-block-start: 30px;
+  border: 1px solid var(--component-contrast-color);
+  border-radius: 10px;
+  padding: 20px;
+
+  iframe {
+    height: 300px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+.shop--article__figure {
+  height: 120px;
+  padding: 0;
+  img {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .shop--article {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shop--article {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .shop--article {
+    width: 90vw;
+  }
+}

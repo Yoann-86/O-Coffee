@@ -1,0 +1,29 @@
+@keyframes swipe-left {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes open-menu {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes close-menu {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
