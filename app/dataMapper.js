@@ -51,37 +51,6 @@ const dataMapper = {
     ];
     const result = await client.query(sql, data);
   },
-  //Function to check if the user name and the password are corrects
-  checkAuth: async (keys) => {
-    const sql = `
-      SELECT log_authorisation FROM "administration"
-      WHERE '${keys[0]}' = LOWER(user_name) 
-      AND '${keys[1]}' = LOWER(password) 
-    `;
-    const result = await client.query(sql);
-    return result.rows[0].log_authorisation;
-  },
-  //Function to add a product
-  addProduct: async (body) => {
-    const sql = `
-    INSERT INTO "coffee"
-      ( name, description, reference, origin, price, characteristic, availability, alt_txt)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-      RETURNING *
-      `;
-
-    const data = [
-      body.name,
-      body.description,
-      body.reference,
-      body.origin,
-      body.price,
-      body.characteristic,
-      body.availability,
-      body.alt_txt,
-    ];
-    const result = await client.query(sql, data);
-  },
 };
 
 module.exports = dataMapper;
