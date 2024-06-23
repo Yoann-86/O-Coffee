@@ -1,4 +1,3 @@
-const session = require("express-session");
 const {
   getNewCoffees,
   getAllCharcteristics,
@@ -10,7 +9,6 @@ const {
 const mainController = {
   homePage: async (req, res) => {
     try {
-      console.log(req.session);
       const newCoffees = await getNewCoffees();
       res.render("home", {
         cssPage: "landing",

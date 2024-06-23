@@ -12,7 +12,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "app/views/pages");
 
-app.use(express.static("integration"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 // App
