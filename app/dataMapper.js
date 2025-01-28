@@ -24,7 +24,11 @@ const dataMapper = {
   },
   //Function to retrieve all products with one characteristic
   getCoffeesByCategory: async (category) => {
-    const sql = `SELECT * FROM coffee WHERE LOWER(characteristic) = '${category}' ORDER BY availability DESC, id DESC;`;
+    const sql = `
+      SELECT * FROM coffee 
+      WHERE LOWER(characteristic) = '${category}' 
+      ORDER BY availability DESC, id DESC;
+      `;
     const result = await client.query(sql);
     return result.rows;
   },
